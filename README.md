@@ -1,37 +1,10 @@
 # Arcadium TRC
 
-You can use the [editor on GitHub](https://github.com/ArcadiumNetwork/Arcadium-TRC/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Created by Arcadium Network, ATRC is a 6-decimal TRC-10 token deployed for use with Arcadium's Dapps and Games on the TRON Network. The total supply is 10,000,000,000 tokens.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+## Social Media
 
-### Markdown
+For news and updates on Arcadium Network, you can join our [Telegram Channel](https://t.me/ATRCNews) or follow us on [Twitter](https://twitter.com/ArcadiumTRX). Be sure to join our [Telegram Chat](https://t.me/ATRCChat), and say hello! We as the Arcadium Network developers are there, as will be other users like yourself!
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/ArcadiumNetwork/Arcadium-TRC/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+## Exchanges and Trading
+Currently, ATRC is not listed anywhere. We intend to list on Poloniex soon - stay tuned!
