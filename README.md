@@ -15,5 +15,5 @@ Arcadium Network intends to build Dapps and games compatible with the TRON block
 For news and updates on Arcadium Network, you can join our [Telegram Channel](https://t.me/ATRCNews) or follow us on [Twitter](https://twitter.com/ArcadiumTRX). Be sure to join our [Telegram Chat](https://t.me/ATRCChat), and say hello! We as the Arcadium Network developers are there, as will be other users like yourself!
 
 ## Exchanges and Trading
-ArcadiumTRC is available for trade on Poloniex! (Click Here)[https://poloniex.org/exchange?id=380] to start trading!
+ArcadiumTRC is available for trade on Poloniex! [Click Here](https://poloniex.org/exchange?id=380) to start trading!
 Very soon (hopefully), ATRC will also be available for tipping on SeedIt!
