@@ -5,7 +5,7 @@ Arcadium Network Token is a "Deflationary Proof-of-Stake" TRC-20 Token deployed 
 
 ## Details
  - 1,000,000,000 Tokens Total Supply (1 Billion)
- - 1% burn on every transfer of tokens
+ - 2.5% fee distributed as Dividends to all Stakers & 2.5% burn on every transfer of tokens
  - 5% fee on Unstake of tokens, distributed as Dividends to remaining Stakers
  
  - Stake tokens to earn Dividends as ATRC - This uses the 'freeze()' function in the Smart Contract.
