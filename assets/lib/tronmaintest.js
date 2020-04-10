@@ -165,7 +165,7 @@ async function run() {
         type: 'function'
       }
     ];
-    var address = 'TQ7sLaJUvbj7EqxZGdAgtSQKF7Diqeg9yL';
+    var address = 'TDzhNUgoh2qA69j8i9K9yorB7bWbqGPrTh';
     var FNB = await tronWeb.contract().at(address);
 
     var requestAbi = [
