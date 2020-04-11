@@ -1,85 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>ATRC | Arcadium Network Token</title>
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="shortcut icon" href="../favicon.ico">
-        <link href="https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700" rel="stylesheet">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>Simple Sidebar - Start Bootstrap Template</title>
+
+        <!-- Core CSS -->
+        <link href="assets/css/style.css" rel="stylesheet">
         <link rel="stylesheet" href="assets/css/animate.min.css">
         <link rel="stylesheet" href="assets/css/jquery.fancybox.css">
-        <link rel="stylesheet" href="assets/css/slick.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-        <link rel="stylesheet" href="assets/css/ember.css">
+        
+        <!-- Custom styles for this template -->
+        <link href="assets/css/sidebar.css" rel="stylesheet">
+        <link href="assets/css/ember.css" rel="stylesheet">
+        <link href="assets/css/fab.css" rel="stylesheet">
 
         <!-- FontAwesome -->
         <script src="https://kit.fontawesome.com/f352960784.js" crossorigin="anonymous"></script>
     </head>
-    
-    <body class="emberWallpaper">
-        <main id="content" role="main">
-            <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #000;">
-                <a class="navbar-brand text-white" href="index.html">
-                    <img src="assets/img/logo.png" width="40px" height="40px" /> Arcadium Network
-                </a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <div class="collapse navbar-collapse" id="navbarColor02">
-                    <ul class="navbar-nav mr-auto">
-                        
-                    </ul>
-                    
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="https://discord.gg/Tk8ynre" target="_blank"><i class="fab fa-discord text-danger"></i> Discord</a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://twitter.com/arcadiumtrx" target="_blank"><i class="fab fa-twitter text-danger"></i> Twitter</a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://github.com/ArcadiumNetwork" target="_blank"><i class="fab fa-github text-danger"></i> GitHub</a></li>
-                        <li class="nav-item"><a class="nav-link" href="https://tronscan.org/#/contract/TDzhNUgoh2qA69j8i9K9yorB7bWbqGPrTh/code" target="_blank"><i class="fas fa-search-dollar text-danger"></i> Contract</a></li>
-                    </ul>
+    <body class="emberWallpaper">
+        <div class="d-flex" id="wrapper">
+
+            <!-- Sidebar -->
+            <div class="bg-primary border-light" id="sidebar-wrapper">
+                <div class="sidebar-heading text-white"><img src="assets/img/logo.png" width="40px" /> ARCADIUM</div>
+                <div class="sidebar-heading text-white">
+                    <small class="text-muted">Current Balance</small>
+                    <h5 class="text-white"><i class="fas fa-wallet text-danger"></i> <span id="myTokens">-</span> ATRC</h5>
+                    <button type="button" class="btn btn-block btn-sm btn-primary btn-outline-danger rcAll" id="withdraw"><i class="fas fa-hand-holding-usd text-white"></i> Withdraw Earnings</button>
                 </div>
-            </nav>
-            <br />
-            <br />
-            <br />
-            <br />
-            <br />
-            
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card emberGlassCard border-white text-white rcAll">
-                            <div class="card-header text-white">My Wallet</div>
-                            <div class="card-body text-white">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <h3 class="text-white"><i class="fas fa-wallet text-danger"></i> <span id="myTokens">-</span> ATRC</h3>
-                                            <small class="text-muted">Your Balance</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer text-white">
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <button type="button" class="btn btn-block btn-sm btn-primary btn-outline-danger rcAll" id="withdraw"><i class="fas fa-hand-holding-usd text-white"></i> Withdraw Earnings</button>
-                                    </div>
+                <div class="list-group list-group-flush">
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white" data-toggle="modal" data-target="#stakingModal"><i class="fas fa-lock text-white"></i>  Stake</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white" data-toggle="modal" data-target="#unstakingModal"><i class="fas fa-unlock text-white"></i>  Unstake</a>
+                    <a href="#" class="list-group-item list-group-item-action bg-dark text-white" data-toggle="modal" data-target="#transferModal"><i class="far fa-paper-plane text-white"></i> Transfer</a>
+                </div>
+                <br />
+                
+                <div class="list-group list-group-flush">
+                    <a href="https://github.com/ArcadiumNetwork" target="_blank" class="list-group-item list-group-item-action bg-dark text-white"><i class="fab fa-github text-white"></i>  GitHub</a>
+                    <a href="https://tronscan.org/#/contract/TDzhNUgoh2qA69j8i9K9yorB7bWbqGPrTh/code" target="_blank" class="list-group-item list-group-item-action bg-dark text-white"><i class="fas fa-search-dollar text-white"></i>  Contract</a>
+                </div>
+                <br />
+                <div class="sidebar-heading text-white">
+                    <small class="text-muted">Remaining Supply</small>
+                    <h5 class="text-white"><i class="fas fa-wallet text-danger"></i> <span id="totalSupply">-</span> ATRC</h5>
+                    <a class="btn btn-block btn-sm btn-primary btn-outline-danger rcAll" onclick="reloadPage();" href=""><i class="fas fa-redo-alt text-white"></i> Refresh</a>
+                </div>
+            </div>
+            <!-- /#sidebar-wrapper -->
+
+            <!-- Page Content -->
+            <div id="page-content-wrapper">
+                <nav class="navbar navbar-expand-lg navbar-dark bg-primary border-light">
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto">
+                            <li class="nav-item"><a class="nav-link" href="https://discord.gg/Tk8ynre" target="_blank"><i class="fab fa-discord text-danger"></i> Discord</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://twitter.com/arcadiumtrx" target="_blank"><i class="fab fa-twitter text-danger"></i> Twitter</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://github.com/ArcadiumNetwork" target="_blank"><i class="fab fa-github text-danger"></i> GitHub</a></li>
+                            <li class="nav-item"><a class="nav-link" href="https://tronscan.org/#/contract/TDzhNUgoh2qA69j8i9K9yorB7bWbqGPrTh/code" target="_blank"><i class="fas fa-search-dollar text-danger"></i> Contract</a></li>
+                        </ul>
+                    </div>
+                </nav>
+
+                <div class="container">
+                    <br />
+                    <div class="row jumbotron emberGlassCard border-white text-white rcAll">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-left">
+                                    <h3 class="text-white">Arcadium TRC</h3>
+                                    <p class="text-muted">TRC-20 Token for Dapps and Games on TRON</p>
                                 </div>
                             </div>
                         </div>
-                        <br />
                     </div>
                     
-                    <div class="col-md-6">
+                    <br />
+                    <div class="row">
+                    <div class="col">
                         <div class="card emberGlassCard border-white text-white rcAll">
                             <div class="card-header text-white">Token Stats</div>
                             <div class="card-body text-white">
                                 <div class="container">
                                     <div class="row">
                                         <div class="col text-center">
-                                            <h3 class="text-white"><i class="fas fa-lock text-danger"></i> <span id="totalSupply">-</span></h3>
-                                            <small class="text-muted">Total Remaining Supply</small>
+                                            <h3 class="text-white"><i class="fas fa-lock text-danger"></i> <span id="myFrozen">-</span></h3>
+                                            <small class="text-muted">My Staked</small>
+                                        </div>
+                                        
+                                        <div class="col text-center">
+                                            <h3 class="text-white"><i class="fas fa-lock text-danger"></i> <span id="myDividends">-</span></h3>
+                                            <small class="text-muted">My Earnings</small>
                                         </div>
                                         
                                         <div class="col text-center">
@@ -92,140 +112,142 @@
                             <div class="card-footer text-white">
                                 <div class="row">
                                     <div class="col text-center">
-                                        <a class="btn btn-block btn-sm btn-primary btn-outline-danger rcAll" onclick="reloadPage();" href=""><i class="fas fa-redo-alt text-white"></i> Refresh</a>
+                                        
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                <br />
-                
-                <div class="row">
-                    <div class="col-md-6">
-                        <div class="card emberGlassCard border-white text-white rcAll">
-                            <div class="card-header text-white">Transfer Tokens</div>
-                            <div class="card-body text-white">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <h5 class="text-white">Recipient</h5>
-                                            <input type="number" class="form-control bg-dark text-danger rcAll" placeholder="Recipient Address" id="transferReceiver">
-                                        </div>
+                </div>
+        
+                <button class="floatingButton" id="menu-toggle"> + </button>
+            </div>
+            <!-- /#page-content-wrapper -->
+
+        </div>
+        <!-- /#wrapper -->
+        
+        <!-- Transfer Modal -->
+        <div class="modal" id="transferModal">
+            <div class="modal-dialog">
+                <div class="modal-content emberGlassCard border-white rcAll">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-white">Transfer ATRC</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <h5 class="text-white">Recipient</h5>
+                                    <input type="number" class="form-control bg-dark text-danger rcAll" placeholder="Recipient Address" id="transferReceiver">
+                                </div>  
                                         
-                                        
-                                        <div class="col text-center">
-                                            <h5 class="text-white">Tokens</h5>
-                                            <input type="number" class="form-control bg-dark text-danger rcAll" placeholder="Tokens to Transfer" id="transferAmount">
-                                        </div>
-                                    </div>
-                                    
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <small>
-                                                <i>Please ensure the details above are correct before transferring!</i>
-                                            </small>
-                                        </div>
-                                    </div>
+                                <div class="col text-center">
+                                    <h5 class="text-white">Tokens</h5>
+                                    <input type="number" class="form-control bg-dark text-danger rcAll" placeholder="Tokens to Transfer" id="transferAmount">
                                 </div>
                             </div>
-                            
-                            <div class="card-footer text-white">
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <a class="btn btn-block btn-sm btn-primary btn-outline-danger rcAll" href="" id="transfer"><i class="far fa-paper-plane text-white"></i> Transfer</a>
-                                    </div>
+                                    
+                            <div class="row">
+                                <div class="col text-center">
+                                    <small><i>Please ensure the details above are correct before transferring!</i></small>
+                                </div>
+                            </div>
+                                    
+                            <div class="row">
+                                <div class="col text-center">
+                                    <a class="btn btn-block btn-sm btn-primary btn-outline-danger rcAll" href="" id="transfer"><i class="far fa-paper-plane text-white"></i> Transfer</a>
                                 </div>
                             </div>
                         </div>
-                        <br />
                     </div>
                     
-                    <div class="col-md-6">
-                        <div class="card emberGlassCard border-white text-white rcAll">
-                            <div class="card-header text-white">My Staking</div>
-                            <div class="card-body text-white">
-                                <div class="container">
-                                    <div class="row">
-                                        <div class="col text-center">
-                                            <h5 class="text-white">Stake</h5>
-                                            <input type="number" class="form-control bg-dark text-danger rcAll" placeholder="Tokens to Stake" id="freezeAmount">
-                                            <small class="text-white">Min. Stake = 1000 Tokens</small>
-                                        </div>
-                                        
-                                        <div class="col text-center">
-                                            <h5 class="text-white">Unstake</h5>
-                                            <input type="number" class="form-control bg-dark text-danger rcAll" placeholder="Tokens to Unstake" id="unfreezeAmount">
-                                            <small class="text-white">5% Tax on total of Unstake</small>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="card-footer text-white">
-                                <div class="row">
-                                    <div class="col text-center">
-                                        <a class="btn btn-block btn-sm btn-primary btn-outline-danger rcAll" href="" id="freeze"><i class="fas fa-lock text-white"></i> Stake</a>
-                                    </div>
-                                    
-                                    <div class="col text-center">
-                                        <a class="btn btn-block btn-sm btn-primary btn-outline-danger rcAll" href="" id="unfreeze"><i class="fas fa-lock-open text-white"></i> Unstake</a>
-                                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-block btn-danger rcAll" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        
+        <!-- Staking Modal -->
+        <div class="modal" id="stakingModal">
+            <div class="modal-dialog">
+                <div class="modal-content emberGlassCard border-white rcAll">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-white">Stake ATRC</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col text-center">
+                                    <h5 class="text-white">Stake</h5>
+                                    <input type="number" class="form-control bg-dark text-danger rcAll" placeholder="Tokens to Stake" id="freezeAmount">
+                                    <small class="text-white">Min. Stake = 1000 Tokens</small><br />
+                                    <br />
+                                    <a class="btn btn-block btn-sm btn-primary btn-outline-danger rcAll" href="" id="freeze"><i class="fas fa-lock text-white"></i> Stake</a>
                                 </div>
                             </div>
                         </div>
-                        <br />
                     </div>
-                </div>
-            </div>
-        </main>
-        
-        <!-- Footer -->
-        <footer class="container">
-            <div class="row jumbotron emberGlassCard rcAll text-white">
-                <div class="col-md-6">
-                    <img src="assets/img/logo.png" height="24px" /> <span class="text-white">ATRC</span> Token
-                    <small class="d-block mb-3 text-muted">&copy; Arcadium Network 2019-2020</small>
-                </div>
-                
-                <div class="col-md-6">
-                    <small class="text-muted">
-                        ATRC is a TRC-20 Token created and maintained by <a href="https://twitter.com/arcadiumTRX" class="text-white" target="_blank">Arcadium Network</a> for the &quot;ATRC&quot; Project. Source Code for this interface is available on <a href="https://github.com/ArcadiumNetwork" target="_blank" class="text-white">GitHub</a>.
-                    </small>
-                </div>
-            </div>
-        </footer>
-        <br />
-        <br />
-        <br />
-        <br />
-        <br />
-        
-        <!-- Bottom Nav -->        
-        <nav class="navbar fixed-bottom navbar-expand-sm navbar-dark" style="background-color: #000;">
-            <a class="navbar-brand" href="#"></a>
-            <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse" id="navbarCollapse" style="">
-                <ul class="navbar-nav ml-auto mr-auto">
-                    <a class="navbar-brand text-muted" href="#">Your Account</a>
-                    <a class="navbar-brand" href="#"><i class="fas fa-user-lock text-danger"></i> <span id="myFrozen">-</span> ATRC STAKED</a>
-                    <a class="navbar-brand" href="#"><i class="fas fa-donate text-danger"></i> <span id="myDividends">-</span> ATRC EARNED</a>
-                </ul>
-            </div>
-        </nav>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-block btn-danger rcAll" data-dismiss="modal">Close</button>
+                    </div>
 
+                </div>
+            </div>
+        </div>
+        
+        <!-- Unstaking Modal -->
+        <div class="modal" id="unstakingModal">
+            <div class="modal-dialog">
+                <div class="modal-content emberGlassCard border-white rcAll">
+                    <div class="modal-header">
+                        <h4 class="modal-title text-white">Unstake ATRC</h4>
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    </div>
+
+                    <div class="modal-body">
+                        <div class="container">
+                            <div class="row">  
+                                <div class="col text-center">
+                                    <h5 class="text-white">Unstake</h5>
+                                    <input type="number" class="form-control bg-dark text-danger rcAll" placeholder="Tokens to Unstake" id="unfreezeAmount">
+                                    <small class="text-white">5% Tax on total of Unstake</small><br />
+                                    <br />
+                                    <a class="btn btn-block btn-sm btn-primary btn-outline-danger rcAll" href="" id="unfreeze"><i class="fas fa-lock-open text-white"></i> Unstake</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-block btn-danger rcAll" data-dismiss="modal">Close</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- Bootstrap core JavaScript -->
         <script src="assets/js/jquery.min.js"></script>
-        <script src="assets/js/jquery-migrate.min.js"></script>
         <script src="assets/js/popper.min.js"></script>
         <script src="assets/js/bootstrap.min.js"></script>
         
-        <!-- JS Implementing Plugins -->
-        <script src="assets/js/jquery.validate.min.js"></script>
-        <script src="assets/js/jquery.fancybox.min.js"></script>
-        <script src="assets/js/typed.min.js"></script>
-        <script src="assets/js/slick.js"></script>
+        <script src="assets/lib/dapp.js"></script>
 
-        <script src="assets/lib/tronmaintest.js"></script>
+        <!-- Menu Toggle Script -->
+        <script>
+            $("#menu-toggle").click(function(e) {
+                e.preventDefault();
+                $("#wrapper").toggleClass("toggled");
+            });
+        </script>
     </body>
 </html>
