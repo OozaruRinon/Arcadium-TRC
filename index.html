@@ -34,12 +34,6 @@
                 <br />
                 <br />
                 <br />
-                <div class="sidebar-heading text-white">
-                    <small class="text-muted">Current Balance</small>
-                    <h5 class="text-white"><i class="fas fa-wallet text-danger"></i> <span id="myTokens">-</span> ATRC</h5>
-                    <button type="button" class="btn btn-block btn-sm btn-primary btn-outline-danger rcAll" id="withdraw"><i class="fas fa-hand-holding-usd text-white"></i> Withdraw Earnings</button>
-                </div>
-                <br />
                 <b class="sidebar-heading text-white"> // ARCADIUM</b>
                 <div class="list-group list-group-flush">
                     <a class="list-group-item list-group-item-action emberGlassButton text-white" href="index.html"><i class="fas fa-rocket text-white"></i>  Dashboard</a>
@@ -51,6 +45,7 @@
                     <a href="#" class="list-group-item list-group-item-action emberGlassButton text-white" data-toggle="modal" data-target="#stakingModal"><i class="fas fa-lock text-white"></i>  Stake</a>
                     <a href="#" class="list-group-item list-group-item-action emberGlassButton text-white" data-toggle="modal" data-target="#unstakingModal"><i class="fas fa-unlock text-white"></i>  Unstake</a>
                     <a href="#" class="list-group-item list-group-item-action emberGlassButton text-white" data-toggle="modal" data-target="#transferModal"><i class="far fa-paper-plane text-white"></i> Transfer</a>
+                    <a href="#" class="list-group-item list-group-item-action emberGlassButton text-white" id="withdraw"><i class="fas fa-hand-holding-usd text-white"></i> Withdraw</a>
                 </div>
                 <br />
                 <b class="sidebar-heading text-white"> // RESOURCES</b>
@@ -58,7 +53,6 @@
                     <a href="https://github.com/ArcadiumNetwork" target="_blank" class="list-group-item list-group-item-action emberGlassButton text-white"><i class="fab fa-github text-white"></i>  GitHub</a>
                     <a href="https://tronscan.org/#/contract/TDzhNUgoh2qA69j8i9K9yorB7bWbqGPrTh/code" target="_blank" class="list-group-item list-group-item-action emberGlassButton text-white"><i class="fas fa-search-dollar text-white"></i>  Contract</a>
                 </div>
-                <br />
                 <div class="sidebar-heading text-white">
                     <small class="text-muted">Remaining Supply</small>
                     <h5 class="text-white"><i class="fas fa-wallet text-danger"></i> <span id="totalSupply">-</span> ATRC</h5>
@@ -97,14 +91,78 @@
                     <br />
                     <br />
                     <br />
-                    <div class="row jumbotron emberGlassCard border-white text-white rcAll animated fadeInDown delay-1s">
+                    <div class="row jumbotron emberGlassCard text-center rcAll">
                         <div class="container">
                             <div class="row">
-                                <div class="col text-left">
-                                    <h3 class="text-white">Arcadium TRC</h3>
-                                    <p class="text-muted">TRC-20 Token for Dapps and Games on TRON</p>
+                                <div class="col text-center">
+                                    <h3  class="text-white">Arcadium TRC</h3>
+                                    <p class="text-muted">TRC-20 Token for Arcadium Dapps and Games</p>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row">
+                        <div class="col-md-6 text-center">
+                            <div class="card emberGlassCard border-light text-white rcAll animated fadeInUp delay-1s">
+                                <div class="card-header text-left">Your Wallet</div>
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <h3 class="text-white"><span id="myTokens">-</span></h3>
+                                            </div>
+                                            
+                                            <div class="col text-center">
+                                                <h3 class="text-white"><span id="myDividends">-</span></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                            <div class="col text-center">
+                                                <small class="text-muted">Your ATRC</small>
+                                            </div>
+                                            
+                                            <div class="col text-center">
+                                                <small class="text-muted">Your Earnings</small>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <br />
+                        </div>
+                        
+                        <div class="col-md-6 text-center">
+                            <div class="card emberGlassCard border-light text-white rcAll animated fadeInUp delay-1s">
+                                <div class="card-header text-left">ATRC Staking</div>
+                                <div class="card-body">
+                                    <div class="container">
+                                        <div class="row">
+                                            <div class="col text-center">
+                                                <h3 class="text-white"><span id="myFrozen">-</span></h3>
+                                            </div>
+                                            
+                                            <div class="col text-center">
+                                                <h3 class="text-white"><span id="totalFrozen">-</span></h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="card-footer">
+                                    <div class="row">
+                                            <div class="col text-center">
+                                                <small class="text-muted">Your Staked ATRC</small>
+                                            </div>
+                                            
+                                            <div class="col text-center">
+                                                <small class="text-muted">ATRC Staked Globally</small>
+                                            </div>
+                                        </div>
+                                </div>
+                            </div>
+                            <br />
                         </div>
                     </div>
                     
@@ -125,60 +183,13 @@
                                 <a class="btn btn-block btn-primary btn-outline-danger text-white text-center rcAll animated fadeInRight delay-2s" href="https://tronscan.org/#/contract/TDzhNUgoh2qA69j8i9K9yorB7bWbqGPrTh/code" target="_blank">View on TronScan</a><br />
                             </div>
                         </div>
-                        <br />
-                    
-                    <div class="row">
-                        <div class="col-md-4 text-center">
-                            <div class="card emberGlassCard border-light text-white rcAll animated fadeInLeft delay-1s">
-                                <div class="card-body">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col text-center">
-                                                <h3 class="text-white"><span id="myDividends">-</span></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <small class="text-muted">Your ATRC Earnings</small>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4 text-center">
-                            <div class="card emberGlassCard border-light text-white rcAll animated fadeInUp delay-1s">
-                                <div class="card-body">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col text-center">
-                                                <h3 class="text-white"><span id="myFrozen">-</span></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <small class="text-muted">Your Staked ATRC</small>
-                                </div>
-                            </div>
-                        </div>
-                        
-                        <div class="col-md-4 text-center">
-                            <div class="card emberGlassCard border-light text-white rcAll animated fadeInRight delay-1s">
-                                <div class="card-body">
-                                    <div class="container">
-                                        <div class="row">
-                                            <div class="col text-center">
-                                                <h3 class="text-white"><span id="totalFrozen">-</span></h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-footer">
-                                    <small class="text-muted">ATRC Staked Globally</small>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
+                    <br />
                     <br />
                 </div>
 
