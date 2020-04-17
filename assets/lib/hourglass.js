@@ -172,7 +172,7 @@ function updateUserInformation(){
         console.log(error)
     });
     
-    $("#ref-url").val("https://c3t.arcadium.network?masternode=" + tronWeb.defaultAddress.base58)
+    $("#ref-url").val("https://atrc.arcadium.network/hourglass.html?masternode=" + tronWeb.defaultAddress.base58)
 }
 
 function checkwallet(){
