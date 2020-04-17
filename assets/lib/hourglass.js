@@ -3,7 +3,6 @@ var p3TronContract;
 var userTokenBalance;
 var account;
 var prev_account;
-
 async function loadTronWeb(){
     if( typeof (window.tronWeb)=== 'undefined'){
         setTimeout(loadTronWeb,1000)
@@ -31,11 +30,11 @@ window.addEventListener("load",function() {
     
     // sell input
     $(".sell-input").change(function(){
-        var txValue=$(this).val();
-        txValue=tronWeb.toHex((txValue* (Math.pow(10,18))));
-        p3TronContract.calculateTronReceived(txValue).call().then((result)=>{
+        var _0xbc13xb=$(this).val();
+        _0xbc13xb= tronWeb.toHex((_0xbc13xb* (Math.pow(10,18))));
+        p3TronContract.calculateTronReceived(_0xbc13xb).call().then((result)=>{
             var sellAmount=sunToDisplay(parseInt(result));
-            $(".trx-input-sell").val(sellAmount)
+            $(".token-input-sell").val(sellAmount)
         }).catch((error)=>{
             console.log(error)
         })
@@ -60,29 +59,17 @@ window.addEventListener("load",function() {
         sellTotal= tronWeb.toHex((sellTotal * (Math.pow(10,18))));
         p3TronContract.sell(sellTotal).send().then((result)=>{
             $(".sell-input").val(0);
-            $(".trx-input-sell").val("0.00000000")
+            $(".token-input-sell").val("0.00000000")
         }).catch((error)=>{console.log(error)})
     });
     
     // transfer button
     $('.transfer-token-button').click(function(){
-        
-        
-        
-        var transferTotal=$(".transfer-tokens-input").val();
-    	var transferRecipient=$(".transfer-recipient-input").val();
+        var transferTotal=$("#transfer-tokens-input").val();
+    	var transferRecipient=$("#transfer-recipient-input").val();
 
-        amount = tronWeb.toSun(transferTotal)
-        recipient = tronWeb.trx.getAccount($(".transfer-recipient-input").val());
-        
-        p3TronContract
-            .transfer(recipient, amount)
-            .send()
-            .then(
-            (result)=>{
-                
-            })
-            .catch((error)=>{console.log(error)})
+        p3TronContract.transfer(transferRecipient, transferTotal).send().then((result)=>{
+        }).catch((error)=>{console.log(error)})
     });
     
     // reinvest button.click
@@ -167,11 +154,11 @@ function updateUserInformation(){
     });
     
     p3TronContract.myDividends(true).call().then((result)=>{
-        var dividendsVar=sunToDisplay(parseInt(result));
-        $(".user-dividends").html(dividendsVar);
+        var _0xbc13x1b=sunToDisplay(parseInt(result));
+        $(".user-dividends").html(_0xbc13x1b);
         $.ajax({
             url:"https://min-api.cryptocompare.com/data/price?fsym=TRX&tsyms=USD",success:function(_0xbc13x1a){
-                $("#user-dividends-usd").html(parseFloat(parseFloat(dividendsVar* _0xbc13x1a.USD).toFixed(2)))
+                $("#user-dividends-usd").html(parseFloat(parseFloat(_0xbc13x1b* _0xbc13x1a.USD).toFixed(2)))
             }
         })
         
@@ -185,7 +172,7 @@ function updateUserInformation(){
         console.log(error)
     });
     
-    $("#ref-url").val("https://atrc.arcadium.network/hourglass.html?masternode=" + tronWeb.defaultAddress.base58)
+    $("#ref-url").val("https://c3t.arcadium.network?masternode=" + tronWeb.defaultAddress.base58)
 }
 
 function checkwallet(){
@@ -206,7 +193,7 @@ function sunToDisplay(_0xbc13x20){
 }
 
 function formatTrxValue(_0xbc13x22){
-    return parseFloat(parseFloat(_0xbc13x22).toFixed(2))
+    return parseFloat(parseFloat(_0xbc13x22).toFixed(5))
 }
 
 function getQueryVariable(_0xbc13x24){
@@ -230,8 +217,8 @@ function translateQuantity(_0xbc13x2a,_0xbc13x2b){
     _0xbc13x2a= Number(_0xbc13x2a);
     finalquantity= _0xbc13x2a;
     modifier= "";
-    if( _0xbc13x2b == undefined){
-        _0xbc13x2b =  0
+    if(_0xbc13x2b== undefined){
+        _0xbc13x2b= 0
     };
     
     if(_0xbc13x2a< 1000000){

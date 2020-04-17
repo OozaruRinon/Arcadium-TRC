@@ -1,20 +1,19 @@
 .floatingButton {
-/*   width: 70px; */
-   height: 70px;
-   background-color: #454545;
+    width: 70px;
+    height: 70px;
+    background-color: #000;
+    border: 3px solid #fff;
     border-radius: 50%;
-   box-shadow: 0 6px 10px 0 #666;
-   transition: all 0.1s ease-in-out;
+    box-shadow: 0 6px 10px 0 #ff0000;
+    transition: all 0.1s ease-in-out;
+    text-align: center;
  
-   color: white;
-   text-align: center;
- 
-   position: fixed;
-   right: 50px;
-   bottom: 50px;
+    position: fixed;
+    right: 50px;
+    bottom: 100px;
 }
  
 .floatingButton:hover {
-   box-shadow: 0 6px 14px 0 #a50000;
+   box-shadow: 0 6px 14px 0 #000089;
    transform: scale(1.05);
 }
